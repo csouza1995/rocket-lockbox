@@ -15,12 +15,12 @@ if (!file_exists(ROOT . "/controllers/{$controller}.controller.php")) {
 $route = $controller;
 
 // like a middleware
-$allowedRoutesToGuest = ['login', 'register', 'forgot-password', 'reset-password'];
-if (in_array($route, $allowedRoutesToGuest) && auth()) {
-    redirect('/');
-} elseif (!in_array($route, $allowedRoutesToGuest) && !auth()) {
-    redirect('/login');
-}
+// $allowedRoutesToGuest = ['login', 'register', 'forgot-password', 'reset-password'];
+// if (in_array($route, $allowedRoutesToGuest) && auth()) {
+//     redirect('/');
+// } elseif (!in_array($route, $allowedRoutesToGuest) && !auth()) {
+//     redirect('/login');
+// }
 
 // include the controller
 require ROOT . "/controllers/{$controller}.controller.php";

@@ -14,7 +14,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"></script>
 </head>
 
-<body class="bg-gray-100 text-gray-100">
+<body class="bg-gray-900">
     <?php require ROOT . "/views/layouts/{$layout}.layout.php"; ?>
 </body>
 
