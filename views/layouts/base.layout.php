@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dracula">
 
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"></script>
 </head>
 
-<body class="bg-gray-900">
+<body class="text-gray-400">
     <?php require ROOT . "/views/layouts/{$layout}.layout.php"; ?>
 </body>
 
