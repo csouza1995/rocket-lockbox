@@ -1,19 +1,13 @@
 <?php
 
-// set ROOT to ../
-define('ROOT', dirname(__DIR__ . '/../../'));
+use Core\Session;
 
-// requires
-require ROOT . "/functions.php";
+// autoload
+require "../autoload.php";
+require "../Core/functions.php";
 
-require ROOT . "/sessions/Session.php";
-require ROOT . "/database/Database.php";
-require ROOT . "/storage/Storage.php";
-require ROOT . "/validators/Validator.php";
-
-// models
-require ROOT . "/models/User.php";
-
+// start session
 Session::start();
 
-require ROOT . "/routes.php";
+// routes
+require "../routes.php";

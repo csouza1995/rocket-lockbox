@@ -7,7 +7,7 @@ if (!$controller) {
 }
 
 // request prevention
-if (!file_exists(ROOT . "/controllers/{$controller}.controller.php")) {
+if (!file_exists("../controllers/{$controller}.controller.php")) {
     abort(404);
 }
 
@@ -23,4 +23,4 @@ $route = $controller;
 // }
 
 // include the controller
-require ROOT . "/controllers/{$controller}.controller.php";
+require "../controllers/{$controller}.controller.php";

@@ -1,5 +1,9 @@
 <?php
 
+namespace Core;
+
+use Exception;
+
 class Storage
 {
     public static string $root = 'storage/';
@@ -7,7 +11,7 @@ class Storage
     public static function store($file, string $dir = ''): string
     {
         // set real directory
-        $dir = ROOT . "/" . self::$root . $dir;
+        $dir = base_path(self::$root . $dir);
 
         // create directory if not exists
         self::makeDir($dir);

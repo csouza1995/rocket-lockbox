@@ -1,5 +1,5 @@
 <div class="relative">
-    <?php if ($successMessage = Session::get('message::success')) : ?>
+    <?php if ($successMessage = session()::get('message::success')) : ?>
         <div class="bg-green-700 text-green-200 p-4 rounded-md mb-5 absolute w-full" x-data="{ show: true }" x-show="show">
             <?= $successMessage ?>
 
@@ -10,7 +10,7 @@
         </div>
     <?php endif; ?>
 
-    <?php if ($errorMessage = Session::get('message::error')) : ?>
+    <?php if ($errorMessage = session()::get('message::error')) : ?>
         <div class="bg-red-700 text-red-200 p-4 rounded-md mb-5 absolute w-full" x-data="{ show: true }" x-show="show">
             <?= $errorMessage ?>
 

@@ -1,13 +1,12 @@
 <?php
 
-// set docroot
-define('ROOT', dirname(__DIR__ . '/../../'));
+use Core\Database;
 
-require ROOT . "/functions.php";
-require ROOT . "/database/Database.php";
-require ROOT . "/database/migration.base.php";
+require 'autoload.php';
+require "Core/functions.php";
+require base_path("/database/migration.base.php");
 
-$database = new Database(require "config/database.php");
+$database = new Database(config('database'));
 
 // get params from command line
 $rollback = in_array('--rollback', $argv);

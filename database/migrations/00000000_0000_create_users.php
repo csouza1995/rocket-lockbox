@@ -1,5 +1,7 @@
 <?php
 
+use Database\MigrationBase;
+
 return new class extends MigrationBase
 {
     public function up()

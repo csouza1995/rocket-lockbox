@@ -1,5 +1,9 @@
 <?php
 
+namespace Database;
+
+use Core\Database;
+
 class MigrationBase
 {
     protected ?Database $db = null;

@@ -14,10 +14,7 @@
     </div>
 
     <div class="bg-white hero mr-40 min-h-screen text-black">
-        <!-- messages -->
-        <?php require ROOT . "/views/partials/_messages.php"; ?>
-
         <!-- content -->
-        <?php require ROOT . "/views/{$view}.view.php"; ?>
+        <?php require base_path("/views/{$view}.view.php"); ?>
     </div>
 </div>

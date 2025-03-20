@@ -1,5 +1,18 @@
 <?php
 
+use Core\Session;
+
+if (!function_exists('base_path')) {
+    function base_path(string $path = ''): string
+    {
+        if (empty($path)) {
+            return __DIR__ . '/../';
+        }
+
+        return __DIR__ . '/../' . "{$path}";
+    }
+}
+
 if (!function_exists('dd')) {
     function dd(...$data)
     {
@@ -43,20 +56,20 @@ if (!function_exists('view')) {
         extract($data);
 
         $view = str_replace('.', '/', $view);
-        if (!file_exists(ROOT . "/views/{$view}.view.php")) {
+        if (!file_exists(base_path("views/{$view}.view.php"))) {
             abort(404);
         }
 
-        if (!file_exists(ROOT . "/views/layouts/base.layout.php")) {
+        if (!file_exists(base_path("/views/layouts/base.layout.php"))) {
             abort(404);
         }
 
         $layout = str_replace('.', '/', $layout);
-        if (!file_exists(ROOT . "/views/layouts/{$layout}.layout.php")) {
+        if (!file_exists(base_path("/views/layouts/{$layout}.layout.php"))) {
             abort(404);
         }
 
-        require ROOT . "/views/layouts/base.layout.php";
+        require base_path("/views/layouts/base.layout.php");
     }
 }
 
@@ -90,7 +103,7 @@ if (!function_exists('abort')) {
 if (!function_exists('config')) {
     function config(?string $key = null)
     {
-        $config = require ROOT . '/config/config.php';
+        $config = require base_path('/config/config.php');
         return $key ? $config[$key] : $config;
     }
 }
@@ -122,6 +135,13 @@ if (!function_exists('errors')) {
         }
 
         return $field ? $currentErrors[$field] : $currentErrors;
+    }
+}
+
+if (!function_exists('session')) {
+    function session()
+    {
+        return new Session();
     }
 }
 

@@ -1,5 +1,11 @@
 <?php
 
+namespace Core;
+
+use Exception;
+use PDO;
+use PDOStatement;
+
 class Database
 {
     protected PDO $pdo;

@@ -16,7 +16,7 @@
 </head>
 
 <body class="text-gray-400">
-    <?php require ROOT . "/views/layouts/{$layout}.layout.php"; ?>
+    <?php require base_path("/views/layouts/{$layout}.layout.php"); ?>
 </body>
 
 </html>

@@ -2,5 +2,5 @@
 
 return [
     'driver' => 'sqlite',
-    'database' => ROOT . '/database/database.sqlite',
+    'database' => base_path('database/database.sqlite'),
 ];

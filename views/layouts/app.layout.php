@@ -1,7 +1,7 @@
 <main>
     <!-- messages -->
-    <?php require ROOT . "/views/partials/_messages.php"; ?>
+    <?php require base_path("/views/partials/_messages.php"); ?>
 
     <!-- content -->
-    <?php require ROOT . "/views/{$view}.view.php"; ?>
+    <?php require base_path("/views/{$view}.view.php"); ?>
 </main>

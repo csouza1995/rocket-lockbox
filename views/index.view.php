@@ -8,12 +8,14 @@
             <p class="pt-2 pb-4 text-xl">
                 Where you can store <span class="italic">all</span> with security.
             </p>
-            <a href="/login" class="btn btn-link">
-                Login
-            </a>
-            <a href="/register" class="btn btn-link">
-                Register
-            </a>
+            <div class="-ml-4">
+                <a href="/login" class="btn btn-link">
+                    Sign in
+                </a>
+                <a href="/register" class="btn btn-link">
+                    Register
+                </a>
+            </div>
         </div>
     </div>
 </div>
