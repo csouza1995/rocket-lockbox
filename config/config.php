@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'database' => require 'database.php',
+    'database' => require base_path('config/database.php'),
 ];

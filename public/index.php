@@ -10,4 +10,4 @@ require "../Core/functions.php";
 Session::start();
 
 // routes
-require "../routes.php";
+require base_path('config/routes.php');

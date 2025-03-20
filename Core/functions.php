@@ -52,7 +52,6 @@ if (!function_exists('dump')) {
 if (!function_exists('view')) {
     function view(string $view, array $data = [], string $layout = 'app')
     {
-        global $route;
         extract($data);
 
         $view = str_replace('.', '/', $view);
